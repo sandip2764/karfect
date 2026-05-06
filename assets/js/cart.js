@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartSubtotal = document.querySelector('.cart-subtotal-amount');
     const cartGst = document.querySelector('.cart-gst-amount');
     const cartTotal = document.querySelector('.cart-total-amount');
-    const BASE_PATH = '/karfect/';
+    const BASE_PATH = 'https://coyish-laverne-unannotated.ngrok-free.dev/';
 
     function updateCart() {
         fetch(BASE_PATH + 'api/cart/get_cart.php')
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         itemElement.classList.add('cart-item');
                         itemElement.setAttribute('data-cart-id', item.id);
                         itemElement.innerHTML = `
-                            <img src="/karfect/${item.image}" alt="${item.title}" class="cart-item-image">
+                            <img src="https://coyish-laverne-unannotated.ngrok-free.dev/${item.image}" alt="${item.title}" class="cart-item-image">
                             <div class="cart-item-details">
                                 <span class="cart-item-title">${item.title}</span>
                                 <span class="cart-item-price">₹${item.discounted_price} x ${item.quantity}</span>

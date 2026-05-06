@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const BASE_PATH = '/karfect/';
+    const BASE_PATH = 'https://coyish-laverne-unannotated.ngrok-free.dev/';
     const changeAddressButton = document.querySelector('.change-address-button');
     const addressModal = document.getElementById('addressModal');
     const closeModal = document.querySelector('.close-modal');

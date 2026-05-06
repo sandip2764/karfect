@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             registerBtn.disabled = true;
             registerBtn.innerHTML = 'Sign Up with Email <span class="spinner"></span>';
 
-            const response = await fetch('http://localhost/karfect/api/auth/send_otp.php', {
+            const response = await fetch('https://coyish-laverne-unannotated.ngrok-free.dev/api/auth/send_otp.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `email=${encodeURIComponent(emailInput.value)}`
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resendOtpBtn.disabled = true;
             resendOtpBtn.innerHTML = 'Sending <span class="spinner"></span>';
 
-            const response = await fetch('http://localhost/karfect/api/auth/send_otp.php', {
+            const response = await fetch('https://coyish-laverne-unannotated.ngrok-free.dev/api/auth/send_otp.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `email=${encodeURIComponent(emailInput.value)}`
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             verifyOtpBtn.disabled = true;
             verifyOtpBtn.innerHTML = 'Verifying <span class="spinner"></span>';
 
-            const response = await fetch('http://localhost/karfect/api/auth/verify_otp.php', {
+            const response = await fetch('https://coyish-laverne-unannotated.ngrok-free.dev/api/auth/verify_otp.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `otp=${otp}`
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             completeSignupBtn.disabled = true;
             completeSignupBtn.innerHTML = 'Completing <span class="spinner"></span>';
 
-            const response = await fetch('http://localhost/karfect/api/auth/complete_signup.php', {
+            const response = await fetch('https://coyish-laverne-unannotated.ngrok-free.dev/api/auth/complete_signup.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `name=${encodeURIComponent(name)}&password=${encodeURIComponent(password)}&confirm_password=${encodeURIComponent(confirmPassword)}`
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             completeSignupBtn.innerHTML = 'Complete Sign Up';
 
             if (data.status === 'success') {
-                window.location.href = 'http://localhost/karfect/index.php';
+                window.location.href = 'https://coyish-laverne-unannotated.ngrok-free.dev/index.php';
             } else {
                 showError(data.message);
             }
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const googleSigninBtn = document.getElementById('google-signin-btn');
         if (googleSigninBtn) {
             googleSigninBtn.addEventListener('click', () => {
-                const redirectUri = window.location.origin + '/karfect/api/auth/google-callback.php';
+                const redirectUri = window.location.origin + '/api/auth/google-callback.php';
                 const scope = 'email profile';
                 const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=${encodeURIComponent(scope)}&prompt=select_account`;
                 window.location.href = authUrl;
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loginBtn.disabled = true;
             loginBtn.innerHTML = 'Signing In <span class="spinner"></span>';
 
-            const response = await fetch('http://localhost/karfect/includes/process_login.php', {
+            const response = await fetch('https://coyish-laverne-unannotated.ngrok-free.dev/includes/process_login.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loginBtn.innerHTML = 'Sign In with Email';
 
             if (data.status === 'success') {
-                window.location.href = 'http://localhost/karfect/index.php';
+                window.location.href = 'https://coyish-laverne-unannotated.ngrok-free.dev/index.php';
             } else {
                 showError(data.message);
             }
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const googleSigninBtn = document.getElementById('google-signin-btn');
         if (googleSigninBtn) {
             googleSigninBtn.addEventListener('click', () => {
-                const redirectUri = window.location.origin + '/karfect/api/auth/google-callback.php';
+                const redirectUri = window.location.origin + '/api/auth/google-callback.php';
                 const scope = 'email profile';
                 const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=${encodeURIComponent(scope)}&prompt=select_account`;
                 window.location.href = authUrl;

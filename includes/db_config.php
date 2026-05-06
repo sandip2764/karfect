@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('BASE_PATH', '/karfect/');
+define('BASE_PATH','https://coyish-laverne-unannotated.ngrok-free.dev/');
 
 // Load environment config
 require_once __DIR__ . '/../env.php';

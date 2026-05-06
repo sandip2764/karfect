@@ -6,7 +6,7 @@ require '../../includes/db_config.php';
 
 $clientId = GOOGLE_CLIENT_ID;
 $clientSecret = GOOGLE_CLIENT_SECRET;
-$redirectUri = 'http://localhost/karfect/api/auth/google-callback.php';
+$redirectUri = 'https://coyish-laverne-unannotated.ngrok-free.dev/api/auth/google-callback.php';
 
 header('Content-Type: application/json');
 
@@ -66,7 +66,7 @@ try {
             $cookie_expiry = time() + (30 * 24 * 60 * 60);
             setcookie($cookie_name, $cookie_value, $cookie_expiry, '/');
 
-            header('Location: http://localhost/karfect/index.php');
+            header('Location: https://coyish-laverne-unannotated.ngrok-free.dev/index.php');
             exit;
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Error getting access token', 'response' => $data]);

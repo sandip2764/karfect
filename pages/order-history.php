@@ -53,7 +53,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <?php if ($items): ?>
                                 <?php foreach ($items as $item): ?>
                                     <div class="order-item">
-                                        <img src="/karfect/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="item-image">
+                                        <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="item-image">
                                         <div class="item-details">
                                             <p class="item-title"><?php echo htmlspecialchars($item['title']); ?></p>
                                             <p class="item-quantity">Quantity: <?php echo $item['quantity']; ?></p>

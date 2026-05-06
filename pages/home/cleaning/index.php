@@ -106,7 +106,7 @@ require '../../../includes/db_config.php';
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="/karfect/<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -180,7 +180,7 @@ require '../../../includes/db_config.php';
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="/karfect/<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>

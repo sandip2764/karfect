@@ -5,15 +5,15 @@
  */
 
 // Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'karfect');
+define('DB_HOST', 'your_database_host');
+define('DB_USER', 'your_database_user');
+define('DB_PASS', 'your_database_password');
+define('DB_NAME', 'your_database_name');
 
 // Google Maps API Key
-define('GOOGLE_MAPS_API_KEY', 'YOUR_GOOGLE_MAPS_API_KEY_HERE');
+define('GOOGLE_MAPS_API_KEY', 'your_google_maps_api_key_here');
 
 // Google OAuth Credentials
-define('GOOGLE_CLIENT_ID', 'YOUR_GOOGLE_CLIENT_ID_HERE');
-define('GOOGLE_CLIENT_SECRET', 'YOUR_GOOGLE_CLIENT_SECRET_HERE');
+define('GOOGLE_CLIENT_ID', 'your_google_client_id_here');
+define('GOOGLE_CLIENT_SECRET', 'your_google_client_secret_here');
 ?>

@@ -90,7 +90,7 @@ $default_address = $stmt->fetch(PDO::FETCH_ASSOC);
                     $subtotal += $item_total;
             ?>
                 <div class="cart-item" data-cart-id="<?php echo $item['id']; ?>">
-                    <img src="/karfect/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="cart-item-image">
+                    <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="cart-item-image">
                     <div class="cart-item-details">
                         <span class="cart-item-title"><?php echo htmlspecialchars($item['title']); ?></span>
                         <span class="cart-item-price">₹<?php echo number_format($item['discounted_price'], 2); ?> x <?php echo $item['quantity']; ?></span>
