@@ -6,11 +6,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('BASE_PATH','https://coyish-laverne-unannotated.ngrok-free.dev/');
-
 // Load environment config
 require_once __DIR__ . '/../env.php';
-
+// Define base path using DOMAIN from env.php
+define('BASE_PATH', DOMAIN . '/');
 try {
     $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
