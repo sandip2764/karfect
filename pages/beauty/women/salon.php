@@ -95,11 +95,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -168,11 +168,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -241,11 +241,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -314,11 +314,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -387,11 +387,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
@@ -460,11 +460,11 @@ require '../../../includes/db_config.php';
 
             foreach ($services as $service):
                 // Handle image path: Use full path from DB, fallback to assets/images if legacy
-                $image_path = strpos($service['image'], 'uploads/') === 0 ? $service['image'] : 'assets/images/' . $service['image'];
+                $image_path = strpos($service['image'], 'uploads/') === 0 ? BASE_PATH . $service['image'] : BASE_PATH . 'assets/images/' . $service['image'];
             ?>
                 <div class="service-card" id="card-<?php echo $service['id']; ?>" aria-label="<?php echo htmlspecialchars($service['title']); ?>">
                     <div class="service-image">
-                        <img src="<?php echo htmlspecialchars($service['image']); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
+                        <img src="<?php echo htmlspecialchars($image_path); ?>" alt="<?php echo htmlspecialchars($service['title']); ?>" />
                     </div>
                     <div class="service-details">
                         <div>
