@@ -1,8 +1,10 @@
 <?php
-/**
- * Environment Configuration Template
- * Copy this file to env.php and fill in your actual values
- */
+// Environment Configuration
+// Change the domain here for future updates
+define('DOMAIN', 'https://xyz.com');
+
+// Base path derived from DOMAIN, used throughout the site for assets, links, etc.
+define('BASE_PATH', DOMAIN . '/');
 
 // Database Configuration
 define('DB_HOST', 'your_database_host');
