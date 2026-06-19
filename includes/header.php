@@ -191,6 +191,7 @@ $default_location = isset($_SESSION['selected_location']) ? $_SESSION['selected_
 <!-- Google Maps API Script with your API key -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAPS_API_KEY; ?>&libraries=places&callback=initAutocomplete"></script>
 
+<script>window.BASE_PATH = '<?php echo BASE_PATH; ?>';</script>
 <script src="<?php echo BASE_PATH; ?>assets/js/cart.js?v=<?php echo time(); ?>"></script>
 
 <script>

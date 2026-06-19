@@ -44,7 +44,7 @@ require 'includes/db_config.php';
         </div>
     </div>
 
-    <script>window.GOOGLE_CLIENT_ID = '<?php echo GOOGLE_CLIENT_ID; ?>';</script>
+    <script>window.GOOGLE_CLIENT_ID = '<?php echo GOOGLE_CLIENT_ID; ?>'; window.BASE_PATH = '<?php echo BASE_PATH; ?>';</script>
     <script src="<?php echo BASE_PATH; ?>assets/js/script.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

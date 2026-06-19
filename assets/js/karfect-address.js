@@ -1,7 +1,7 @@
 let map, marker, autocomplete;
 
 // Base URL for API calls
-const BASE_URL = 'https://coyish-laverne-unannotated.ngrok-free.dev';
+const BASE_URL = window.BASE_PATH ? window.BASE_PATH.replace(/\/$/, '') : '';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Attempting to fetch addresses from:', `${BASE_URL}/api/address/get_addresses.php`);
