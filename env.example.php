@@ -7,10 +7,20 @@ define('DOMAIN', 'https://xyz.com');
 define('BASE_PATH', DOMAIN . '/');
 
 // Database Configuration
-define('DB_HOST', 'your_database_host');
-define('DB_USER', 'your_database_user');
-define('DB_PASS', 'your_database_password');
-define('DB_NAME', 'your_database_name');
+// Set USE_AWS_SECRETS to true to fetch DB credentials dynamically from AWS Secrets Manager
+define('USE_AWS_SECRETS', true);
+define('AWS_REGION', 'us-east-1');
+define('AWS_SECRET_NAME', 'db_secret_manager');
+
+// Optional AWS Credentials (leave empty if using IAM Roles on EC2/ECS/EKS/Lambda)
+define('AWS_ACCESS_KEY_ID', '');
+define('AWS_SECRET_ACCESS_KEY', '');
+
+// Fallback / Local Database Credentials (used when USE_AWS_SECRETS is false or AWS fetch fails)
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'karfect_db');
 
 // Google Maps API Key
 define('GOOGLE_MAPS_API_KEY', 'your_google_maps_api_key_here');
